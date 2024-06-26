@@ -29,6 +29,18 @@ view: flights {
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
+  dimension_group: filter_ui {
+    type: time
+    sql: ${TABLE}.arr_time ;;
+    description: "Date of the holiday taken."
+    datatype: timestamp
+    timeframes: [
+      date,
+      week,
+      month
+    ]
+  }
+
   dimension_group: arr {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
