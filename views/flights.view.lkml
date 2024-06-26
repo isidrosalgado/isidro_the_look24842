@@ -32,7 +32,6 @@ view: flights {
   dimension_group: filter_ui {
     type: time
     sql: ${TABLE}.arr_time ;;
-    description: "Date of the holiday taken."
     datatype: timestamp
     timeframes: [
       date,
