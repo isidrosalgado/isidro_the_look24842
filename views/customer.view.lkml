@@ -28,6 +28,7 @@ view: customer {
     sql: ${age} ;;  }
 
   dimension: neighborhood {
+    hidden: yes
     type: string
     sql: ${TABLE}.neighborhood ;;
   }
